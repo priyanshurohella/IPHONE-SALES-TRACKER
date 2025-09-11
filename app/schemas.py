@@ -52,11 +52,11 @@ class IPhoneSaleCreate(IPhoneSaleBase):
 
 class IPhoneSaleUpdate(BaseModel):
     customer_name: Optional[str] = Field(None, max_length=100)
-    phone_model: Optional[str]
-    color: Optional[str]
-    storage_gb: Optional[int]
-    price: Optional[float]
-    sale_date: Optional[date]
+    phone_model: Optional[str] = None
+    color: Optional[str] = None
+    storage_gb: Optional[int] = None
+    price: Optional[float] = None
+    sale_date: Optional[date] = None
     store_location: Optional[str] = Field(None, max_length=100)
 
 
