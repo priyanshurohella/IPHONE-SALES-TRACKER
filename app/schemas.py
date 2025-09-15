@@ -5,13 +5,13 @@ from pydantic import BaseModel
 
 
 class IPhoneSaleBase(BaseModel):
-    customer_name: str = Field(..., max_length=100)
+    customer_name: str = Field(max_length=100)
     phone_model: str
     color: str
     storage_gb: int
     price: float
     sale_date: date
-    store_location: str = Field(..., max_length=100)
+    store_location: str = Field(max_length=100)
 
     @field_validator("phone_model")
     def validate_model(cls, v):
